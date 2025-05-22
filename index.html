@@ -2,61 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WWBC – WoofWorks Broadcasting Company</title>
   <style>
+    :root {
+      --red: #d00;
+      --dark-bg: #111;
+      --light-text: #eee;
+      --accent: #f44;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Courier New', monospace;
-      background-color: #111;
-      color: #eee;
+      background-color: var(--dark-bg);
+      color: var(--light-text);
       line-height: 1.6;
     }
     header {
-      background: #d00;
+      background: var(--red);
       color: white;
       padding: 1rem;
       text-align: center;
       text-transform: uppercase;
       font-weight: bold;
-      letter-spacing: 2px;
-    }
-    nav {
-      background: #222;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0.5rem 0;
-    }
-    nav a {
-      color: #eee;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #d00;
-    }
-    .section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2 {
-      color: #f44;
-      border-bottom: 2px solid #d00;
-      padding-bottom: 0.5rem;
-    }
-    footer {
-      background: #111;
-      text-align: center;
-      color: #555;
-      font-size: 0.9rem;
-      padding: 2rem 1rem;
-      border-top: 1px solid #333;
+      letter-spacing: 1.5px;
     }
     .logo {
       font-size: 2rem;
       font-weight: bold;
       letter-spacing: 3px;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+    }
+    nav a {
+      color: var(--light-text);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #333;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    nav a:hover {
+      background-color: var(--red);
+    }
+    .section {
+      padding: 1.5rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    footer {
+      background: var(--dark-bg);
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      border-top: 1px solid #333;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 1.5rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      nav a {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+      }
+      .section {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -76,7 +115,7 @@
 
   <div class="section" id="news">
     <h2>🎙️ SOMETHIN'!</h2>
-    <p>📢 THING!</p>
+    <p>📢 SoMThIn!</p>
     <p>🚨 STAY TUNED FOR A REALLY IMPORTANT THING (PROBABLY)!</p>
   </div>
 
@@ -96,7 +135,7 @@
       <li>📡 Random barking noises from a bunker</li>
       <li>💬 "The Scrappy Terrier Speaks!" – Probably inspirational</li>
     </ul>
-    <p><em>(Radio button does nothing yet.)</em></p>
+    <p><em>(Radio button does nothing yet. Deal with it.)</em></p>
   </div>
 
   <div class="section" id="about">
